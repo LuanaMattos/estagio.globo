@@ -1,0 +1,397 @@
+@importar url('https://fonts.googleapis.com/css2?family=Saira:wght@200;300;400;700&family=Tektur&display=swap');
+@importar url('./reset.css');
+@importar url('./responsive.css');
+@importar url('./variables.css');
+
+HTML{
+    tamanho da fonte: 62,5%;
+    comportamento de rolagem: suave;
+}
+
+.seta para cima {
+    posição: fixa;
+    inferior: 20px;
+    direita: 20px;
+    cor de fundo: var(--branco);
+    preenchimento: 5px;
+    fronteira: nenhuma;
+    raio da fronteira: 100%;
+    cursor: ponteiro;
+    índice z: 5;
+    opacidade: 0;
+    transição: opacidade 0,3s facilidade de entrada;
+}
+
+.seta para cima img {
+    largura máxima: 20px;
+}
+
+/* PRIMEIRA VISTA */
+.primeira vista {
+    altura: 100vh;
+    imagem de fundo: url('../images/space.gif');
+    posição: relativa;
+}
+
+.cabeçalho {
+    preenchimento: 30px;
+    margem: 0 50px;
+}
+
+.header-sociais {
+    exibição: flexível;
+    justificar-conteúdo: flex-start;
+    alinhar itens: centro;
+    tamanho da fonte: 2,6rem;
+    lacuna: 30px;
+    transição: facilidade de entrada de 0,4s;
+}
+
+.header-socials li:hover {
+    transformar: var(-escala);
+}
+
+.header-itens {
+    exibição: flexível;
+    justificar conteúdo: flex-end;
+    alinhar itens: centro;
+    lacuna: 55px;
+    margem superior: -25px;
+}
+
+.header-itens li a {
+    tamanho da fonte: 1,8rem;
+    intensidade da fonte: Negrito;
+    posição: relativa;
+}
+
+.header-itens li a::after {
+    contente: '';
+    posição: absoluta;
+    esquerda: 0;
+    inferior: -2px;
+    largura: 100%;
+    altura: 2px;
+    cor de fundo: var(--branco);
+    transformar: escalaX(0);
+    origem da transformação: canto inferior direito;
+    transição: transformação 0,3s de atenuação;
+}
+
+.header-itens li a:hover::after {
+    transformar: escalaX(1);
+    origem da transformação: canto inferior esquerdo;
+}
+
+/* MENU HAMBURGUER */
+.header .menu {
+    Mostrar nenhum;
+    largura: 100px;
+    altura: 100px;
+    alinhar-se: extremidade flexível;
+}
+
+.header rótulo de navegação {
+    exibição: flexível;
+    direção flexível: coluna;
+}
+
+.header .menu-hamburguer {
+    exibição: bloco;
+    cor de fundo: var(--branco);
+    posição: relativa;
+    superior: 29px;
+    esquerda: 15px;
+    largura: 30px;
+    altura: 2px;
+    transição: 0,5s de facilidade de entrada;
+}
+
+.header .menu-hamburguer:antes,
+.header .menu-hamburguer:depois {
+    contente: "";
+    cor de fundo: var(--branco);
+    exibição: bloco;
+    largura: 100%;
+    altura: 100%;
+    posição: absoluta;
+    transição: 0,2s de facilidade de entrada;
+}
+
+.header .menu-hamburguer:antes {
+    superior: -10px;
+}
+
+.header .menu-hamburguer:depois {
+    inferior: -10px;
+}
+
+.header entrada {
+    Mostrar nenhum;
+}
+
+.header input:checked~label .menu-hamburguer {
+    transformar: girar (45 graus);
+}
+
+.header input:checked~label .menu-hamburguer:before {
+    transformar: girar (90 graus);
+    superior: 0;
+}
+
+.header input:checked~label .menu-hamburguer:depois {
+    transformar: girar (90 graus);
+    inferior: 0;
+}
+
+.imagem inicial {
+    posição: absoluta;
+    inferior: 30px;
+    certo: 50%;
+    animação: downarrow 0,6s infinita facilidade de entrada alternativa;
+}
+
+@keyframes seta para baixo {
+    0% {
+        -webkit-transform: traduzirY(0);
+        opacidade: 0,4;
+    }
+
+    100% {
+        -webkit-transform: traduzirY(0.4em);
+        opacidade: 0,9;
+    }
+}
+
+.frases h1 {
+    família de fontes: 'Tektur', sem serifa;
+    tamanho da fonte: var(--tamanho da fonte grande);
+    exibição: flexível;
+    justificar-conteúdo: centro;
+    alinhar itens: centro;
+    altura mínima: 75vh;
+}
+
+#typed-output::depois {
+    conteúdo: '|';
+    display: bloco embutido;
+    animação: piscar 0,7s alternado infinito;
+}
+
+@quadros-chave piscam {
+    para {
+        opacidade: 0;
+    }
+}
+
+.desbotando {
+    opacidade: 0;
+    transição: 1s de facilidade;
+    transformar: traduzirX(-50px);
+}
+
+.fading.show {
+    opacidade: 1;
+    transformar: traduzirX(0px);
+    índice z: 4;
+}
+
+/* SOBRE MIM */
+.sobre mim {
+    exibição: flexível;
+    justificar-conteúdo: centro;
+    alinhar itens: centro;
+    posição: relativa;
+    altura mínima: 85vh;
+}
+
+.sobre mim .fading {
+    exibição: flexível;
+    alinhar itens: centro;
+    preenchimento: 50px;
+    lacuna: 50px;
+}
+
+.sobre-mim::antes {
+    contente: ' ';
+    exibição: bloco;
+    posição: absoluta;
+    índice z: 1;
+    imagem de fundo: var(--background);
+    largura: 100%;
+    altura: 100%;
+    /* filtro: opacidade(60%); */
+}
+
+.sobre mim .icon {
+    largura máxima: 300px;
+    borda: 6px sólido #ff8fab;
+    raio da fronteira: 50%;
+    índice z: 2;
+}
+
+.sobre mim .descrição {
+    índice z: 2;
+}
+
+.sobre mim .descrição h2 {
+    tamanho da fonte: var(--title-fontsize);
+    margem inferior: 20px;
+}
+
+.sobre mim .descrição p {
+    tamanho da fonte: 1,8rem;
+    largura máxima: 550px;
+    margem: 0;
+}
+
+/* PROJETOS */
+.projetos {
+    imagem de fundo: url('../images/background-wopacity.png');
+    exibição: flexível;
+    direção flexível: coluna;
+    justificar-conteúdo: centro;
+    alinhar itens: centro;
+    preenchimento: 40px 0;
+}
+
+.projetos h2 {
+    tamanho da fonte: var(--title-fontsize);
+    borda inferior: var(--título-borda);
+    margem inferior: 50px;
+}
+
+.lista de projetos {
+    exibição: grade;
+    colunas de modelo de grade: 1fr 1fr;
+}
+
+.lista de projetos li {
+    exibição: flexível;
+    direção flexível: coluna;
+    alinhar itens: centro;
+    margem: 20px;
+    tamanho da fonte: 1,8rem;
+}
+
+.lista de projetos a,
+p {
+    margem: 15px;
+}
+
+.lista de projetos h3 {
+    tamanho da fonte: var(--title-fontsize);
+}
+
+.projetos img {
+    largura máxima: 450px;
+    raio da borda: 10px;
+}
+
+.lista de projetos li p {
+    largura máxima: 80%;
+}
+
+.lista de projetos .idiomas {
+    tamanho da fonte: var(--tamanho da fonte grande);
+}
+
+/* HABILIDADES */
+.habilidades {
+    imagem de fundo: var(--background);
+    preenchimento: 50px;
+    exibição: flexível;
+    direção flexível: coluna;
+    justificar-conteúdo: centro;
+    alinhar itens: centro;
+}
+
+.habilidades h2 {
+    tamanho da fonte: var(--title-fontsize);
+    margem inferior: 40px;
+    borda inferior: var(--título-borda);
+}
+
+.skills-itens {
+    exibição: grade;
+    colunas de modelo de grade: repetir (3, automático);
+    alinhamento de texto: centro;
+    tamanho da fonte: 1,8rem;
+}
+
+.habilidades-itens li {
+    margem: 20px;
+}
+
+.skills-itens .fa-marcas {
+    tamanho da fonte: 5,5rem;
+    transição: facilidade de entrada de 0,2s;
+}
+
+.skills-itens .fa-brands:hover {
+    transformar: escala(1,3);
+}
+
+.skills-itens .skill-name {
+    tamanho da fonte: 2rem;
+    margem superior: 10px;
+}
+
+.skills-itens .skill-descrição {
+    largura máxima: 350px;
+}
+
+/* CONTATO */
+.contato {
+    imagem de fundo: var(--background);
+    exibição: flexível;
+    justificar-conteúdo: centro;
+    alinhar itens: centro;
+    lacuna: 50px;
+    altura: 85vh;
+}
+
+.contact-itens h2 {
+    tamanho da fonte: var(--title-fontsize);
+    peso da fonte: 400;
+}
+
+.contato-sociais {
+    exibição: flexível;
+    lacuna: 20px;
+    tamanho da fonte: var(--tamanho da fonte grande);
+    transição: facilidade de entrada de 0,4s;
+    margem: 15px 0;
+    posição: relativa;
+}
+
+.contact-socials li:hover {
+    transformar: var(-escala);
+}
+
+.e-mail social {
+    Mostrar nenhum;
+}
+
+.show-e-mail {
+    exibição: bloco;
+    posição: absoluta;
+    preenchimento: 10px;
+    cor de fundo: preto;
+    borda: 1px sólido #ddd;
+    índice z: 2;
+    tamanho da fonte: 1,2rem;
+    espaço em branco: nowrap;
+}
+
+.btn-currículo {
+    cor de fundo: #219ebc;
+    preenchimento: 10px 20px;
+    raio da borda: 20px;
+    tamanho da fonte: 1,6rem;
+    transição: facilidade de entrada de 0,2s;
+}
+
+.btn-currículo:hover {
+    sombra da caixa: 0px 0px 20px 2px #219ebc
+}

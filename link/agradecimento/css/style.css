@@ -1,0 +1,25 @@
+body{
+          background-image: url(https://i.ytimg.com/vi/I22Cup0Potk/maxresdefault.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      
+      #container {
+          margin-top: 20%;
+          text-align: center;
+          font-size: x-large;
+          color: white;
+          padding: 50px;
+          background-image: url(https://th.bing.com/th/id/OIP.KasphTPQ4R_X9H-pEffMNAHaEo?rs=1&pid=ImgDetMain);
+          background-repeat: no-repeat;
+          background-size: cover;
+          border: 2px solid #000;
+        }
+        #thank-you-text {
+          margin-top: 20%;
+          text-align: center;
+          font-size: 200%;
+          color: white;
+          display: none;
+      
+        }
